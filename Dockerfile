@@ -1,15 +1,32 @@
-# 1. Imagen base con Java 17 (ligera y oficial)
+# ----------------------------
+# Stage 1: Build con Maven
+# ----------------------------
+FROM maven:3.9.3-eclipse-temurin-17 AS build
+
+# Directorio de trabajo dentro del contenedor
+WORKDIR /app
+
+# Copiamos el pom.xml primero para cachear dependencias
+COPY pom.xml .
+
+# Copiamos el código fuente
+COPY src ./src
+
+# Construimos el .jar (omitimos tests para acelerar)
+RUN mvn clean package -DskipTests
+
+# ----------------------------
+# Stage 2: Runtime con Java
+# ----------------------------
 FROM amazoncorretto:17-alpine-jdk
 
-# 2. Etiquetas opcionales
-LABEL maintainer="Enida"
-LABEL description="Contenedor para la aplicación Spring Boot Categorias"
+WORKDIR /app
 
-# 3. Copiar el .jar generado por Maven
-COPY target/categorias-0.0.1-SNAPSHOT.jar app.jar
+# Copiamos el .jar desde el stage de build
+COPY --from=build /app/target/Holamundo-0.0.1-SNAPSHOT.jar app.jar
 
-# 4. Exponer el puerto que usa Spring Boot (por default 8080)
+# Exponemos el puerto que usa Spring Boot
 EXPOSE 8080
 
-# 5. Comando para ejecutar la aplicación
+# Comando para ejecutar la app
 ENTRYPOINT ["java","-jar","/app.jar"]
