@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagina principal</title>
+    <style>
+        /* Estilos del contenedor del menú */
+        nav {
+            background-color: #333;
+        }
+
+        /* Lista horizontal */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Hace que los elementos estén en fila */
+            justify-content: center; /* Centra el menú */
+        }
+
+        /* Elementos de la lista */
+        nav ul li {
+            margin: 0;
+        }
+
+        /* Links del menú */
+        nav ul li a {
+            display: block;
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        table {
+            width: 70%;              /* 🔹 Reducir tamaño de la tabla */
+            max-width: 800px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Estilos para los botones */
+        .btn {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .editar {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+        }
+
+        .editar:hover {
+            background-color: #45a049;
+        }
+
+        .eliminar {
+            background-color: #f44336; /* Rojo */
+            color: white;
+            margin-left: 5px;
+        }
+
+        .eliminar:hover {
+            background-color: #da190b;
+        }
+
+        .btn_agregar:hover {
+            background-color: #4CAF34;
+        }
+
+        .btn_agregar{
+            background-color: #333333;
+            color: white;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Listado de pacientes</h1>
+</br>
+<a href="agregar_paciente.html">
+<button class="btn_agregar">Agregar paciente</button>
+</a>
+</br>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Diagnóstico</th>
+        <th>Acciones</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Juan Pérez</td>
+        <td>Hipertensión arterial</td>
+        <td>
+            <a href="actualizar_paciente.html"><button class="btn editar">Editar</button></a>
+            <a href="eliminar_paciente.html"><button class="btn eliminar">Eliminar</button></a>
+        </td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>María López</td>
+        <td>Diabetes tipo 2</td>
+        <td>
+            <a href="actualizar_paciente.html"><button class="btn editar">Editar</button></a>
+            <a href="eliminar_paciente.html"><button class="btn eliminar">Eliminar</button></a>
+        </td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Carlos Hernández</td>
+        <td>Asma</td>
+        <td>
+            <a href="actualizar_paciente.html"><button class="btn editar">Editar</button></a>
+            <a href="eliminar_paciente.html"><button class="btn eliminar">Eliminar</button></a>
+        </td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Ana Martínez</td>
+        <td>Gripe común</td>
+        <td>
+            <a href="actualizar_paciente.html"><button class="btn editar">Editar</button></a>
+            <a href="eliminar_paciente.html"><button class="btn eliminar">Eliminar</button></a>
+        </td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>Luis Rodríguez</td>
+        <td>Gastritis</td>
+        <td>
+            <a href="actualizar_paciente.html"><button class="btn editar">Editar</button></a>
+            <a href="eliminar_paciente.html"><button class="btn eliminar">Eliminar</button></a>
+        </td>
+    </tr>
+    <tr>
+        <td>6</td>
+        <td>Sofía Ramírez</td>
+        <td>Migraña</td>
+        <td>
+            <a href="actualizar_paciente.html"><button class="btn editar">Editar</button></a>
+            <a href="eliminar_paciente.html"><button class="btn eliminar">Eliminar</button></a>
+        </td>
+    </tr>
+    <tr>
+        <td>7</td>
+        <td>Pedro González</td>
+        <td>Fractura de tibia</td>
+        <td>
+            <a href="actualizar_paciente.html"><button class="btn editar">Editar</button></a>
+            <a href="eliminar_paciente.html"><button class="btn eliminar">Eliminar</button></a>
+        </td>
+    </tr>
+    <tr>
+        <td>8</td>
+        <td>Laura Fernández</td>
+        <td>Alergia estacional</td>
+        <td>
+            <a href="actualizar_paciente.html"><button class="btn editar">Editar</button></a>
+            <a href="eliminar_paciente.html"><button class="btn eliminar">Eliminar</button></a>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

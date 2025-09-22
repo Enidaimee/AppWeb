@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar_paciente</title>
+    <style>
+        /* Estilos del contenedor del menú */
+        nav {
+            background-color: #333;
+        }
+
+        /* Lista horizontal */
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Hace que los elementos estén en fila */
+            justify-content: center; /* Centra el menú */
+        }
+
+        /* Elementos de la lista */
+        nav ul li {
+            margin: 0;
+        }
+
+        /* Links del menú */
+        nav ul li a {
+            display: block;
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        table {
+            width: 70%;              /* 🔹 Reducir tamaño de la tabla */
+            max-width: 800px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Estilos para los botones */
+        .btn {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .editar {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+        }
+
+        .editar:hover {
+            background-color: #45a049;
+        }
+
+        .eliminar {
+            background-color: #f44336; /* Rojo */
+            color: white;
+            margin-left: 5px;
+        }
+
+        .eliminar:hover {
+            background-color: #da190b;
+        }
+
+        .btn_agregar:hover {
+            background-color: #4CAF34;
+        }
+
+        .btn_agregar{
+            background-color: #333333;
+            color: white;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <ul>
+        <li><a href="index.html">Regreso al inicio</a></li>
+    </ul>
+</nav>
+<h1>Agregar pacientes</h1>
+</br>
+<label>Nombre:</label></br>
+<textarea id="nombre_agregar" name="nombre" rows="2" cols="80" placeholder="Escribe aquí..."></textarea>
+
+</br>
+<button class="btn_agregar-paciente">Guardar</button>
+<a href="index.html"><button class="btn_cancelar">Cancelar</button></a>
+
+
+</body>
+</html>
